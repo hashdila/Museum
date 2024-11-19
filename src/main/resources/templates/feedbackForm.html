@@ -1,0 +1,27 @@
+<!-- src/main/resources/templates/feedbackForm.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+<h1>Japanese Museum Feedback Form</h1>
+<p th:if="${message}" th:text="${message}"></p>
+<form action="/submitFeedback" method="post">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Student ID:</label><br>
+    <input type="text" name="studentId" required><br><br>
+
+    <!-- Replace questions with your 10 unique questions -->
+    <label>Question 1:</label><br>
+    <input type="text" name="question1" required><br><br>
+
+    <label>Additional Comments:</label><br>
+    <textarea name="comments"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

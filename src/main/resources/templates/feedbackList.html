@@ -1,0 +1,28 @@
+<!-- src/main/resources/templates/feedbackList.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submitted Feedback</title>
+</head>
+<body>
+<h1>Submitted Feedback</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Student ID</th>
+        <th>Question 1</th>
+        <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="feedback : ${feedbackList}">
+        <td th:text="${feedback.name}"></td>
+        <td th:text="${feedback.studentId}"></td>
+        <td th:text="${feedback.question1}"></td>
+        <td th:text="${feedback.comments}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
